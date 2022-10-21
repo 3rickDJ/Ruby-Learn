@@ -57,8 +57,8 @@ end
 
 if __FILE__ == $0
 
-    # input = File.read("input.txt")
+    input = File.read("input2.txt")
     # puts input.split("")
-    test1 = Coordinates.new("^v", [[0,0]])
+    test1 = Coordinates.new(input, [[0,0]])
     p test1.recorridoSanta_Robot
 end
