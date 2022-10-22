@@ -20,16 +20,22 @@ class WrappingPaper
       sqr_paper = 2*x*y + 2*x*z + 2*y*z
       sqr_paper =  sqr_paper + @min[0]*@min[1]
     end
+    def feet_ribbon
+      x = @dimentions.sort[0]
+      y = @dimentions.sort[1]
+      ribbon = 2*(x+y)
+      ribbon += @dimentions.inject(1) {|total, n| total = total*n}
+    end
 end
 
 if __FILE__ == $0
-  dimentions = File.readlines("partI.txt").collect do |line|
+  dimentions = File.readlines("partII.txt").collect do |line|
     line.gsub(/\s/,"")
   end
   paper = WrappingPaper.new("0x0x0")
   paper = dimentions.collect do |dimention|
     paper.dimentions = dimention
-    paper.square_feet_paper
+    paper.feet_ribbon
   end
   puts paper.sum
   # puts paper.dimentions
