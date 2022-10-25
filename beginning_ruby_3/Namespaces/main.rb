@@ -1,3 +1,4 @@
-require './number_stuff'
 require './letter_stuff'
-puts random
+require './number_stuff'
+puts NumberStuff.random
+puts LetterStuff.random

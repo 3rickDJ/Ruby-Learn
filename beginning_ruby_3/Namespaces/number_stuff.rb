@@ -1,3 +1,5 @@
-def random
-  rand(1000)
+module NumberStuff
+  def self.random
+    rand(1000)
+  end
 end
