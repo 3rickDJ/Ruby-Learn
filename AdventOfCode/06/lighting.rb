@@ -2,12 +2,13 @@ require 'set'
 class Lighting
   def initialize
     @grid = Set[]
+    @total_brightness = []
   end
-  def turn(text)
-    coordinates = (text.scan /\d?\d?\d/).collect {|elm| elm.to_i}
+  def turn(instruction)
+    coordinates = (instruction.scan /\d?\d?\d/).collect {|elm| elm.to_i}
     coordinates = [[coordinates[0],coordinates[1]],[coordinates[2],coordinates[3]]]
     lights = range(coordinates)
-    case text
+    case instruction
       when /toggle/
         @grid = @grid ^ lights
       when /on/
@@ -31,6 +32,25 @@ class Lighting
   end
   def turnedOn
     @grid.size
+  end
+  def change_brightness(instruction)
+    coordinates = (instruction.scan /\d?\d?\d/).collect {|elm| elm.to_i}
+    coordinates = [[coordinates[0],coordinates[1]],[coordinates[2],coordinates[3]]]
+    lights = range(coordinates)
+    case instruction
+    when /toggle/
+
+    when /on/
+      p coordinates
+    when /off/
+      p coordinates
+    end
+  end
+  def range_brightness(number)
+  end
+
+  def total_brightness()
+
   end
 end
 
