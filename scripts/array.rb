@@ -4,5 +4,5 @@ puts("Hola BUAPO")
 #     arr[i] +=1;
 # }
 arr = [1,2,3]
-p arr.map { |n| n = n + 1 ; p n; return n + 1 }
+p arr.map { |n| n = n + 1 ; p n; n + 1 }
 p arr
