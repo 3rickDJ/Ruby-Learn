@@ -4,5 +4,7 @@ puts("Hola BUAPO")
 #     arr[i] +=1;
 # }
 arr = [1,2,3]
-p arr.map { |n| n = n + 1 ; p n; n + 1 }
-p arr
+p arr.map { |n| n + 1 }
+puts 'Sleep 5 in array'
+sleep 5
+puts 'After 5 in array'
