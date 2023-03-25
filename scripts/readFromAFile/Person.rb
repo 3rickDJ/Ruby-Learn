@@ -7,6 +7,6 @@ class Person
   end
 
   def inspect
-    "#{name} (#{age})"
+    "9999#{@name} (#{@age})"
   end
 end
